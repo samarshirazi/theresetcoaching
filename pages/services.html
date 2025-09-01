@@ -86,7 +86,7 @@
                     </div>
                     <div class="stat-circle">
                         <div class="stat-number">300%</div>
-                        <div class="stat-label">Average Business Growth</div>
+                        <div class="stat-label"><span class="stat-line-md">Average Business</span> <span class="stat-line-md">Growth</span></div>
                     </div>
                 </div>
             </div>
@@ -468,13 +468,12 @@
             height: 200px;
             background: var(--bg-gradient);
             border-radius: 50%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
+            display: grid;
+            place-items: center;
             color: var(--text-white);
             text-align: center;
             margin: 0 auto;
+            padding: 16px;
         }
         
         .stat-circle .stat-number {
@@ -488,6 +487,18 @@
             font-size: 1rem;
             opacity: 0.9;
             color: var(--text-white);
+            line-height: 1.2;
+            max-width: 80%;
+            width: 100%;
+            margin: 0 auto;
+            white-space: normal;
+        }
+
+        /* Force two-line layout for desktop only */
+        .stat-circle .stat-label .stat-line-md { display: inline; }
+        @media (min-width: 992px) {
+            .stat-circle .stat-label { font-size: 0.9rem; }
+            .stat-circle .stat-label .stat-line-md { display: block; }
         }
         
         .service-detail {

@@ -2,11 +2,22 @@
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
-});
+if (hamburger && navMenu) {
+    const toggleMenu = () => {
+        const isOpen = hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+    };
+
+    hamburger.addEventListener('click', toggleMenu);
+    hamburger.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            toggleMenu();
+        }
+    });
+}
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {
@@ -20,18 +31,35 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // Testimonials Slider
 const testimonialCards = document.querySelectorAll('.testimonial-card');
 const testimonialDots = document.querySelectorAll('.testimonial-dot');
+const testimonialLive = document.getElementById('testimonial-live');
 let currentTestimonial = 0;
 
 function showTestimonial(index) {
-    // Hide all testimonials
-    testimonialCards.forEach(card => card.classList.remove('active'));
-    testimonialDots.forEach(dot => dot.classList.remove('active'));
+    // Hide all testimonials and reset dot states
+    testimonialCards.forEach((card, i) => {
+        card.classList.remove('active');
+        card.setAttribute('aria-hidden', 'true');
+    });
+    testimonialDots.forEach(dot => {
+        dot.classList.remove('active');
+        dot.setAttribute('aria-current', 'false');
+    });
     
     // Show selected testimonial
     testimonialCards[index].classList.add('active');
+    testimonialCards[index].setAttribute('aria-hidden', 'false');
     testimonialDots[index].classList.add('active');
+    testimonialDots[index].setAttribute('aria-current', 'true');
     
     currentTestimonial = index;
+
+    // Update live region announcement
+    if (testimonialLive) {
+        const total = testimonialCards.length;
+        const author = testimonialCards[index].querySelector('.testimonial-author h4');
+        const authorName = author ? author.textContent.trim() : '';
+        testimonialLive.textContent = `Showing testimonial ${index + 1} of ${total}${authorName ? ': ' + authorName : ''}`;
+    }
 }
 
 // Add click handlers to dots

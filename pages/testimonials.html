@@ -34,7 +34,7 @@
                 <a href="contact.html" class="nav-link">Contact</a>
                 <a href="contact.html" class="cta-button">Book Session</a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-controls="navMenu" aria-expanded="false" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -801,14 +801,15 @@
             border: 2px solid var(--border-color);
             padding: 0.75rem 1.5rem;
             border-radius: 25px;
-            color: var(--text-secondary);
+            color: var(--text-primary); /* improved contrast on light background */
             cursor: pointer;
             transition: all var(--transition-medium);
             font-weight: 500;
         }
         
         .category-btn.active,
-        .category-btn:hover {
+        .category-btn:hover,
+        .category-btn:focus-visible {
             background: var(--primary-color);
             border-color: var(--primary-color);
             color: var(--text-white);

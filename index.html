@@ -34,7 +34,7 @@
                 <a href="pages/contact.html" class="nav-link">Contact</a>
                 <a href="pages/contact.html" class="cta-button">Book Session</a>
             </div>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" role="button" aria-label="Toggle navigation menu" aria-controls="navMenu" aria-expanded="false" tabindex="0">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -149,8 +149,8 @@
                 <h2>Success Stories</h2>
                 <p>Real transformations from real people</p>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card active">
+            <div class="testimonials-slider" aria-label="Testimonials">
+                <div class="testimonial-card active" id="testimonial-slide-0" role="group" aria-roledescription="slide" aria-label="Slide 1 of 2: Testimonial from Sarah Martinez" aria-hidden="false">
                     <div class="testimonial-content">
                         <div class="quote-mark">"</div>
                         <p>"Flora's coaching completely transformed my real estate business. Her personalized approach and deep industry knowledge helped me increase my sales by 300% in just one year."</p>
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
+                <div class="testimonial-card" id="testimonial-slide-1" role="group" aria-roledescription="slide" aria-label="Slide 2 of 2: Testimonial from Michael Chen" aria-hidden="true">
                     <div class="testimonial-content">
                         <div class="quote-mark">"</div>
                         <p>"Working with Flora helped me discover my true purpose and make a successful career transition. Her guidance gave me the confidence to pursue my dreams."</p>
@@ -181,10 +181,12 @@
                     </div>
                 </div>
             </div>
-            <div class="testimonial-navigation">
-                <button class="testimonial-dot active" data-slide="0"></button>
-                <button class="testimonial-dot" data-slide="1"></button>
+            <div class="testimonial-navigation" role="group" aria-label="Testimonials navigation">
+                <button class="testimonial-dot active" type="button" data-slide="0" aria-label="Show testimonial 1 of 2" aria-current="true" aria-controls="testimonial-slide-0"></button>
+                <button class="testimonial-dot" type="button" data-slide="1" aria-label="Show testimonial 2 of 2" aria-current="false" aria-controls="testimonial-slide-1"></button>
             </div>
+            <!-- Live region for announcing testimonial changes to screen readers -->
+            <div id="testimonial-live" class="sr-only" aria-live="polite" aria-atomic="true">Showing testimonial 1 of 2: Sarah Martinez</div>
         </div>
     </section>
 

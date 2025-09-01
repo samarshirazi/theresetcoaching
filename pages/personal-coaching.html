@@ -718,13 +718,19 @@
             background: var(--bg-primary);
             padding: 1.5rem;
             border-radius: var(--border-radius);
-            box-shadow: var(--shadow-medium);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 4px 15px rgba(0, 0, 0, 0.1);
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: 0.5rem;
             animation: float 6s ease-in-out infinite;
             min-width: 120px;
+            transition: all var(--transition-medium);
+        }
+        
+        .floating-card:hover {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
         }
         
         .floating-card:nth-child(1) {

@@ -7,31 +7,31 @@
 
 /* ===== CSS VARIABLES ===== */
 :root {
-    /* Colors */
-    --primary-color: #2563eb;
-    --primary-dark: #1d4ed8;
-    --primary-light: #3b82f6;
-    --secondary-color: #f59e0b;
-    --accent-color: #ec4899;
-    
-    --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --text-light: #9ca3af;
-    --text-white: #ffffff;
-    
-    --bg-primary: #ffffff;
-    --bg-secondary: #f9fafb;
-    --bg-dark: #111827;
-    --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    
-    --border-color: #e5e7eb;
-    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-large: 0 10px 25px rgba(0, 0, 0, 0.15);
-    
+    /* Colors - The Reset Coaching Brand */
+    --primary-color: #2B3210;
+    --primary-dark: #1a1e09;
+    --primary-light: #3d4816;
+    --secondary-color: #FBF8EF;
+    --accent-color: #DE6E27;
+
+    --text-primary: #2B3210;
+    --text-secondary: #5d6347;
+    --text-light: #8a8d7a;
+    --text-white: #FBF8EF;
+
+    --bg-primary: #FBF8EF;
+    --bg-secondary: #F5F2E9;
+    --bg-dark: #2B3210;
+    --bg-gradient: linear-gradient(135deg, #DE6E27 0%, #E5E2D9 100%);
+
+    --border-color: #E5E2D9;
+    --shadow-light: 0 1px 3px rgba(43, 50, 16, 0.1);
+    --shadow-medium: 0 4px 6px rgba(43, 50, 16, 0.1);
+    --shadow-large: 0 10px 25px rgba(43, 50, 16, 0.15);
+
     /* Typography */
-    --font-primary: 'Inter', sans-serif;
-    --font-display: 'Playfair Display', serif;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-display: 'Hello Paris', cursive;
     
     /* Spacing */
     --container-max-width: 1200px;
@@ -172,8 +172,8 @@ p {
 }
 
 .cta-button {
-    background: var(--secondary-color);
-    color: var(--text-primary); /* improved contrast on light orange */
+    background: var(--accent-color);
+    color: var(--text-white);
     padding: 10px 20px;
     border-radius: var(--border-radius);
     text-decoration: none;
@@ -182,8 +182,8 @@ p {
 }
 
 .cta-button:hover {
-    background: #d97706; /* darker orange improves contrast further */
-    color: var(--text-white); /* ensure high contrast on darker hover */
+    background: var(--primary-color);
+    color: var(--text-white);
     transform: translateY(-2px);
 }
 
@@ -218,17 +218,25 @@ p {
     height: 80px;
 }
 
-.logo h2 {
+.logo h2,
+.logo h3 {
     font-size: 1.5rem;
     color: var(--primary-color);
     margin: 0;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1;
 }
 
 .logo span {
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--text-secondary);
     display: block;
-    margin-top: -5px;
+    margin-top: 0;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    letter-spacing: 0.2em;
 }
 
 /* Improve contrast for logo subtitle in header and footer */

@@ -374,7 +374,10 @@ a:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--bg-gradient);
+    background-image: url('../../index_photo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -2;
 }
 
@@ -385,8 +388,8 @@ a:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    opacity: 0.3;
+    background: linear-gradient(135deg, rgba(43, 50, 16, 0.85) 0%, rgba(43, 50, 16, 0.6) 50%, rgba(222, 110, 39, 0.4) 100%);
+    z-index: 1;
 }
 
 .hero-overlay {
@@ -395,7 +398,7 @@ a:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(43, 50, 16, 0.3);
     z-index: -1;
 }
 
@@ -407,6 +410,8 @@ a:focus-visible {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-text {
@@ -447,6 +452,16 @@ a:focus-visible {
     animation: slideInUp 1s ease 0.8s both;
 }
 
+.hero-photo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
 .hero-placeholder {
     width: 300px;
     height: 300px;
@@ -470,6 +485,7 @@ a:focus-visible {
     left: 50%;
     transform: translateX(-50%);
     animation: bounce 2s infinite;
+    z-index: 2;
 }
 
 .scroll-arrow {
@@ -666,6 +682,438 @@ section {
 
 .service-link:hover i {
     transform: translateX(5px);
+}
+
+/* ===== FLORA'S STORY SECTION ===== */
+.flora-story {
+    padding: 80px 0;
+    background: var(--bg-primary);
+}
+
+.story-content {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-image {
+    width: 100%;
+}
+
+.story-image img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-large);
+    object-fit: cover;
+}
+
+.story-text h2 {
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+}
+
+.story-text p {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+.story-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* ===== PAGE HEADER (Services Pages) ===== */
+.page-header {
+    background: var(--bg-gradient);
+    color: var(--text-white);
+    padding: 120px 0 80px;
+    text-align: center;
+}
+
+.page-header h1 {
+    color: var(--text-white);
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-header-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== SERVICE HERO SECTION ===== */
+.service-hero {
+    padding: 80px 0;
+    background: var(--bg-secondary);
+}
+
+.service-hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-hero .hero-text {
+    text-align: left;
+}
+
+.service-hero h2 {
+    font-size: 2.5rem;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    line-height: 1.3;
+}
+
+.service-hero .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.7;
+}
+
+.service-hero .hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.service-hero .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-image-placeholder {
+    width: 400px;
+    height: 400px;
+    background: var(--bg-gradient);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-large);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.service-image-placeholder i {
+    font-size: 8rem;
+    color: var(--text-white);
+    opacity: 0.9;
+    z-index: 1;
+}
+
+/* ===== WHY CHOOSE / FOR SECTIONS - CARD GRIDS ===== */
+.why-grid,
+.for-grid,
+.tools-grid,
+.bio-goals-grid,
+.program-features-grid,
+.benefits-grid,
+.do-grid,
+.gain-grid,
+.results-grid,
+.learn-grid,
+.mastery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.why-card,
+.for-card,
+.tool-card,
+.bio-goal-card,
+.program-feature-card,
+.benefit-card,
+.do-item,
+.gain-card,
+.result-card,
+.learn-card,
+.mastery-card {
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+    border-top: 4px solid var(--accent-color);
+}
+
+.why-card:hover,
+.for-card:hover,
+.tool-card:hover,
+.bio-goal-card:hover,
+.program-feature-card:hover,
+.benefit-card:hover,
+.do-item:hover,
+.gain-card:hover,
+.result-card:hover,
+.learn-card:hover,
+.mastery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-large);
+}
+
+.why-icon,
+.for-icon,
+.tool-icon,
+.bio-goal-icon,
+.program-feature-icon,
+.benefit-icon,
+.gain-icon,
+.result-icon,
+.learn-icon,
+.mastery-icon,
+.do-icon {
+    width: 50px;
+    height: 50px;
+    background: var(--bg-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.why-icon i,
+.for-icon i,
+.tool-icon i,
+.bio-goal-icon i,
+.program-feature-icon i,
+.benefit-icon i,
+.gain-icon i,
+.result-icon i,
+.learn-icon i,
+.mastery-icon i,
+.do-icon i {
+    font-size: 1.3rem;
+    color: var(--text-white);
+}
+
+.why-card h3,
+.for-card h3,
+.tool-card h4,
+.bio-goal-card h4,
+.program-feature-card h4,
+.benefit-card h4,
+.do-item h4,
+.gain-card h3,
+.result-card h3,
+.learn-card h3,
+.mastery-card h3 {
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+}
+
+.why-card p,
+.for-card p,
+.do-item p,
+.gain-card p,
+.result-card p,
+.learn-card p,
+.mastery-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* ===== RESET FRAMEWORK SECTION ===== */
+.reset-framework {
+    background: var(--bg-secondary);
+}
+
+.framework-steps,
+.reset-framework {
+    display: grid;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.framework-step,
+.framework-item {
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 2rem;
+    align-items: start;
+    background: var(--bg-primary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    transition: all var(--transition-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.framework-step::before,
+.framework-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: var(--bg-gradient);
+}
+
+.framework-step:hover,
+.framework-item:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-large);
+}
+
+.step-letter,
+.framework-letter {
+    width: 80px;
+    height: 80px;
+    background: var(--bg-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    font-family: var(--font-display);
+    color: var(--text-white);
+    flex-shrink: 0;
+}
+
+.step-content h3,
+.framework-content h3 {
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
+
+.step-content p,
+.framework-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===== PHILOSOPHY SECTION ===== */
+.philosophy-points {
+    display: grid;
+    gap: 2rem;
+}
+
+.philosophy-point {
+    display: grid;
+    grid-template-columns: 60px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+}
+
+.point-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--bg-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.point-icon i {
+    font-size: 1.5rem;
+    color: var(--text-white);
+}
+
+.point-content h3 {
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-size: 1.3rem;
+}
+
+.point-content p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ===== CREDENTIAL TAGS & TRANSFORMATION LISTS ===== */
+.credential-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.credential-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    transition: all var(--transition-fast);
+}
+
+.credential-tag:hover {
+    background: var(--primary-color);
+    color: var(--text-white);
+}
+
+.credential-tag i {
+    color: var(--accent-color);
+    font-size: 1rem;
+}
+
+.credential-tag:hover i {
+    color: var(--text-white);
+}
+
+.transformation-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1rem 0;
+}
+
+.transformation-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.5rem 0;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.transformation-item i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
 }
 
 /* ===== TESTIMONIALS ===== */
@@ -1048,7 +1496,116 @@ section {
     .services-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .why-grid,
+    .for-grid,
+    .tools-grid,
+    .bio-goals-grid,
+    .program-features-grid,
+    .benefits-grid,
+    .do-grid,
+    .gain-grid,
+    .results-grid,
+    .learn-grid,
+    .mastery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .framework-step,
+    .framework-item {
+        grid-template-columns: 60px 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .step-letter,
+    .framework-letter {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+
+    .step-content h3,
+    .framework-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .philosophy-point {
+        grid-template-columns: 50px 1fr;
+        gap: 1rem;
+    }
+
+    .point-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .point-icon i {
+        font-size: 1.2rem;
+    }
+
+    .page-header {
+        padding: 100px 0 60px;
+    }
+
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .service-hero {
+        padding: 60px 0;
+    }
+
+    .service-hero-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .service-hero .hero-text {
+        text-align: center;
+    }
+
+    .service-hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .service-hero .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .service-hero .hero-cta {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .service-image-placeholder {
+        width: 280px;
+        height: 280px;
+    }
+
+    .service-image-placeholder i {
+        font-size: 5rem;
+    }
+
+    .story-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .story-text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .story-text {
+        text-align: left;
+    }
+
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;

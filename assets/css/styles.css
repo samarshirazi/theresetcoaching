@@ -8,21 +8,21 @@
 /* ===== CSS VARIABLES ===== */
 :root {
     /* Colors - The Reset Coaching Brand */
-    --primary-color: #2B3210;
-    --primary-dark: #1a1e09;
-    --primary-light: #3d4816;
-    --secondary-color: #FBF8EF;
-    --accent-color: #DE6E27;
+    --primary-color: #E5E2D9;
+    --primary-dark: #d0cdc4;
+    --primary-light: #f0ede4;
+    --secondary-color: #2B3210;
+    --accent-color: #505631;
 
     --text-primary: #2B3210;
-    --text-secondary: #5d6347;
-    --text-light: #8a8d7a;
+    --text-secondary: #505631;
+    --text-light: #DE6E27;
     --text-white: #FBF8EF;
 
     --bg-primary: #FBF8EF;
-    --bg-secondary: #F5F2E9;
+    --bg-secondary: #E5E2D9;
     --bg-dark: #2B3210;
-    --bg-gradient: linear-gradient(135deg, #DE6E27 0%, #E5E2D9 100%);
+    --bg-gradient: linear-gradient(135deg, #E5E2D9 0%, #505631 100%);
 
     --border-color: #E5E2D9;
     --shadow-light: 0 1px 3px rgba(43, 50, 16, 0.1);
@@ -134,12 +134,12 @@ p {
 
 .btn-secondary {
     background: transparent;
-    color: var(--primary-color);
-    border: 2px solid var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
 }
 
 .btn-secondary:hover {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: var(--text-white);
     transform: translateY(-2px);
 }
@@ -160,7 +160,7 @@ p {
 .social-proof .btn-secondary:hover,
 .newsletter-section .btn-secondary:hover {
     background: var(--text-white);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     border-color: var(--text-white);
     transform: translateY(-2px);
 }
@@ -182,7 +182,7 @@ p {
 }
 
 .cta-button:hover {
-    background: var(--primary-color);
+    background: var(--secondary-color);
     color: var(--text-white);
     transform: translateY(-2px);
 }
@@ -191,7 +191,7 @@ p {
 .btn-primary:focus-visible,
 .btn-secondary:focus-visible,
 .cta-button:focus-visible {
-    outline: 3px solid var(--primary-color);
+    outline: 3px solid var(--accent-color);
     outline-offset: 2px;
 }
 
@@ -265,7 +265,7 @@ p {
 
 .nav-link:hover,
 .nav-link.active {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* Ensure keyboard focus is clearly visible on links */
@@ -276,7 +276,7 @@ p {
 .phone-link:focus-visible,
 .footer-links a:focus-visible,
 a:focus-visible {
-    outline: 3px solid var(--primary-color);
+    outline: 3px solid var(--accent-color);
     outline-offset: 2px;
     text-decoration: underline;
 }
@@ -288,7 +288,7 @@ a:focus-visible {
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--primary-color);
+    background: var(--accent-color);
     border-radius: 1px;
 }
 
@@ -355,7 +355,7 @@ a:focus-visible {
 .dropdown-link:hover,
 .dropdown-link.active {
     background: var(--bg-secondary);
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 /* ===== HERO SECTION ===== */
@@ -552,7 +552,7 @@ section {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-family: var(--font-display);
 }
 
@@ -656,19 +656,19 @@ section {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-weight: bold;
 }
 
 .service-link {
-    color: var(--primary-color);
+    color: var(--accent-color);
     text-decoration: none;
     font-weight: 500;
     transition: color var(--transition-fast);
 }
 
 .service-link:hover {
-    color: var(--primary-dark);
+    color: var(--secondary-color);
 }
 
 .service-link i {
@@ -1076,7 +1076,7 @@ section {
 }
 
 .credential-tag:hover {
-    background: var(--primary-color);
+    background: var(--accent-color);
     color: var(--text-white);
 }
 
@@ -1106,7 +1106,7 @@ section {
 }
 
 .transformation-item i {
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-size: 1.1rem;
     margin-top: 0.2rem;
     flex-shrink: 0;
@@ -1139,7 +1139,7 @@ section {
 
 .quote-mark {
     font-size: 4rem;
-    color: var(--primary-color);
+    color: var(--accent-color);
     font-family: var(--font-display);
     line-height: 1;
     margin-bottom: 1rem;
@@ -1201,12 +1201,12 @@ section {
 }
 
 .testimonial-dot.active {
-    background: var(--primary-color);
+    background: var(--accent-color);
 }
 
 /* Visible focus indicator for accessibility */
 .testimonial-dot:focus-visible {
-    outline: 2px solid var(--primary-color);
+    outline: 2px solid var(--accent-color);
     outline-offset: 2px;
 }
 
@@ -1320,7 +1320,7 @@ section {
 }
 
 .social-link:hover {
-    background: var(--primary-color);
+    background: var(--accent-color);
     transform: translateY(-2px);
 }
 

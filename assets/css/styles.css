@@ -9,33 +9,29 @@
 :root {
     /* Colors - The Reset Coaching Brand - Restricted Palette */
     /* Only these 5 colors are used throughout the site */
-    --deep-brown: #2B3210;      /* Deep earthy brown */
-    --warm-tan: #FBF8EF;        /* Warm tan / soft beige */
-    --clay-tone: #DE6E27;       /* Muted taupe-brown / clay tone */
-    --light-beige: #E5E2D9;     /* Light neutral beige */
-    --olive-gray: #505631;      /* Olive-gray accent */
 
     /* New color palette */
     --main-bg: #B8A088;         /* Main background - warm taupe */
+    --light-bg: #FDFCFC;        /* Light background - off-white */
     --dark-brown: #5D3310;      /* Dark brown accent - use sparingly for dimension */
     --medium-brown: #A56C32;    /* Medium brown accent - use sparingly for depth */
 
     /* Semantic color assignments */
     --primary-color: #B8A088;
-    --secondary-color: #2B3210;
-    --accent-color: #505631;
+    --secondary-color: #b8a088;
+    --accent-color: #fdfcfc;
     --accent-edge: #5D3310;     /* Subtle accent for borders/depth */
     --accent-dimension: #A56C32; /* Subtle accent for dimension */
 
-    --text-primary: #2B3210;
-    --text-secondary: #505631;
-    --text-accent: #DE6E27;
+    --text-primary: #5d3310;
+    --text-secondary: #fdfcfc;
+    --text-accent: #5d3310;
     --text-white: #FBF8EF;
 
     --bg-primary: #B8A088;
-    --bg-secondary: #FBF8EF;
+    --bg-secondary: #FDFCFC;
     --bg-dark: #2B3210;
-    --bg-gradient: linear-gradient(135deg, #B8A088 0%, #505631 100%);
+    --bg-gradient: linear-gradient(135deg, #B8A088 0%, #887059 100%);
 
     --border-color: #A56C32;    /* Use medium brown for subtle borders */
     --shadow-light: 0 1px 3px rgba(93, 51, 16, 0.1);
@@ -360,7 +356,7 @@ a:focus-visible {
 .dropdown-link {
     display: block;
     padding: 0.75rem 1.5rem;
-    color: var(--text-primary);
+    color: var(--text-white);
     text-decoration: none;
     transition: all var(--transition-fast);
 }
@@ -528,7 +524,7 @@ section {
 
 /* ===== INTRODUCTION SECTION ===== */
 .introduction {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .intro-content {
@@ -540,11 +536,13 @@ section {
 
 .intro-text h2 {
     margin-bottom: 1.5rem;
+    color: var(--text-white);
 }
 
 .intro-text p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    color: var(--text-white);
 }
 
 .intro-stats {
@@ -566,13 +564,13 @@ section {
     display: block;
     font-size: 2rem;
     font-weight: 700;
-    color: var(--accent-color);
+    color: var(--text-white);
     font-family: var(--font-display);
 }
 
 .stat-label {
     font-size: 0.9rem;
-    color: var(--text-secondary);
+    color: var(--text-white);
     font-weight: 500;
 }
 
@@ -613,6 +611,7 @@ section {
     position: relative;
     overflow: hidden;
     border: 1px solid var(--accent-edge);
+    color: var(--text-white);
 }
 
 .service-card::before {
@@ -648,11 +647,12 @@ section {
 
 .service-card h3 {
     margin-bottom: 1rem;
-    color: var(--text-primary);
+    color: var(--text-white);
 }
 
 .service-card p {
     margin-bottom: 1.5rem;
+    color: var(--text-white);
 }
 
 .service-features {
@@ -662,7 +662,7 @@ section {
 
 .service-features li {
     padding: 0.5rem 0;
-    color: var(--text-secondary);
+    color: var(--text-white);
     position: relative;
     padding-left: 1.5rem;
 }
@@ -671,19 +671,19 @@ section {
     content: '✓';
     position: absolute;
     left: 0;
-    color: var(--accent-color);
+    color: var(--text-white);
     font-weight: bold;
 }
 
 .service-link {
-    color: var(--accent-color);
+    color: var(--text-white);
     text-decoration: none;
     font-weight: 500;
     transition: color var(--transition-fast);
 }
 
 .service-link:hover {
-    color: var(--secondary-color);
+    color: rgba(251, 248, 239, 0.8);
 }
 
 .service-link i {
@@ -699,6 +699,7 @@ section {
 .flora-story {
     padding: 80px 0;
     background: var(--bg-primary);
+    color: var(--text-white);
 }
 
 .story-content {
@@ -723,13 +724,13 @@ section {
 }
 
 .story-text h2 {
-    color: var(--text-primary);
+    color: var(--text-white);
     margin-bottom: 1.5rem;
     font-size: 2.5rem;
 }
 
 .story-text p {
-    color: var(--text-secondary);
+    color: var(--text-white);
     line-height: 1.8;
     margin-bottom: 1.5rem;
 }
@@ -941,7 +942,7 @@ section {
 .learn-card h3,
 .mastery-card h3 {
     margin-bottom: 0.75rem;
-    color: var(--text-primary);
+    color: var(--text-white);
     font-size: 1.3rem;
 }
 
@@ -952,7 +953,7 @@ section {
 .result-card p,
 .learn-card p,
 .mastery-card p {
-    color: var(--text-secondary);
+    color: var(--text-white);
     line-height: 1.6;
     margin-bottom: 0;
 }
@@ -1022,13 +1023,13 @@ section {
 .step-content h3,
 .framework-content h3 {
     margin-bottom: 0.75rem;
-    color: var(--text-primary);
+    color: var(--text-white);
     font-size: 1.5rem;
 }
 
 .step-content p,
 .framework-content p {
-    color: var(--text-secondary);
+    color: var(--text-white);
     line-height: 1.7;
     margin: 0;
 }
@@ -1158,7 +1159,7 @@ section {
 
 .quote-mark {
     font-size: 4rem;
-    color: var(--accent-color);
+    color: var(--text-white);
     font-family: var(--font-display);
     line-height: 1;
     margin-bottom: 1rem;
@@ -1167,7 +1168,7 @@ section {
 .testimonial-content p {
     font-size: 1.2rem;
     font-style: italic;
-    color: var(--text-primary);
+    color: var(--text-white);
     margin-bottom: 2rem;
 }
 
@@ -1195,11 +1196,11 @@ section {
 
 .author-info h4 {
     margin: 0;
-    color: var(--text-primary);
+    color: var(--text-white);
 }
 
 .author-info span {
-    color: var(--text-secondary);
+    color: var(--text-white);
     font-size: 0.9rem;
 }
 
@@ -1278,7 +1279,7 @@ section {
 
 /* ===== FOOTER ===== */
 .footer {
-    background: var(--bg-dark);
+    background: #5D3310;
     color: var(--text-white);
     padding: 4rem 0 2rem;
 }

@@ -15,25 +15,30 @@
     --light-beige: #E5E2D9;     /* Light neutral beige */
     --olive-gray: #505631;      /* Olive-gray accent */
 
-    /* Semantic color assignments using only the 5 approved colors */
-    --primary-color: #E5E2D9;
-    --secondary-color: #2B3210;
-    --accent-color: #505631;
+    /* New color palette */
+    --main-bg: #B8A088;         /* Main background - warm taupe */
+    --dark-brown: #5D3310;      /* Dark brown accent */
+    --medium-brown: #A56C32;    /* Medium brown accent */
 
-    --text-primary: #2B3210;
-    --text-secondary: #505631;
+    /* Semantic color assignments */
+    --primary-color: #B8A088;
+    --secondary-color: #5D3310;
+    --accent-color: #A56C32;
+
+    --text-primary: #5D3310;
+    --text-secondary: #A56C32;
     --text-accent: #DE6E27;
     --text-white: #FBF8EF;
 
-    --bg-primary: #E5E2D9;
+    --bg-primary: #B8A088;
     --bg-secondary: #FBF8EF;
-    --bg-dark: #2B3210;
-    --bg-gradient: linear-gradient(135deg, #E5E2D9 0%, #505631 100%);
+    --bg-dark: #5D3310;
+    --bg-gradient: linear-gradient(135deg, #B8A088 0%, #A56C32 100%);
 
-    --border-color: #E5E2D9;
-    --shadow-light: 0 1px 3px rgba(43, 50, 16, 0.1);
-    --shadow-medium: 0 4px 6px rgba(43, 50, 16, 0.1);
-    --shadow-large: 0 10px 25px rgba(43, 50, 16, 0.15);
+    --border-color: #B8A088;
+    --shadow-light: 0 1px 3px rgba(93, 51, 16, 0.1);
+    --shadow-medium: 0 4px 6px rgba(93, 51, 16, 0.1);
+    --shadow-large: 0 10px 25px rgba(93, 51, 16, 0.15);
 
     /* Typography */
     --font-primary: 'Montserrat', sans-serif;
@@ -390,7 +395,7 @@ a:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(43, 50, 16, 0.85) 0%, rgba(43, 50, 16, 0.6) 50%, rgba(222, 110, 39, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(93, 51, 16, 0.85) 0%, rgba(93, 51, 16, 0.6) 50%, rgba(165, 108, 50, 0.4) 100%);
     z-index: 1;
 }
 
@@ -400,7 +405,7 @@ a:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(43, 50, 16, 0.3);
+    background: rgba(93, 51, 16, 0.3);
     z-index: -1;
 }
 
@@ -459,7 +464,7 @@ a:focus-visible {
     max-width: 450px;
     height: auto;
     border-radius: var(--border-radius);
-    box-shadow: 0 20px 60px rgba(43, 50, 16, 0.4);
+    box-shadow: 0 20px 60px rgba(93, 51, 16, 0.4);
     border: 4px solid rgba(251, 248, 239, 0.2);
     object-fit: cover;
 }

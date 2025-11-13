@@ -17,25 +17,27 @@
 
     /* New color palette */
     --main-bg: #B8A088;         /* Main background - warm taupe */
-    --dark-brown: #5D3310;      /* Dark brown accent */
-    --medium-brown: #A56C32;    /* Medium brown accent */
+    --dark-brown: #5D3310;      /* Dark brown accent - use sparingly for dimension */
+    --medium-brown: #A56C32;    /* Medium brown accent - use sparingly for depth */
 
     /* Semantic color assignments */
     --primary-color: #B8A088;
-    --secondary-color: #5D3310;
-    --accent-color: #A56C32;
+    --secondary-color: #2B3210;
+    --accent-color: #505631;
+    --accent-edge: #5D3310;     /* Subtle accent for borders/depth */
+    --accent-dimension: #A56C32; /* Subtle accent for dimension */
 
-    --text-primary: #5D3310;
-    --text-secondary: #A56C32;
+    --text-primary: #2B3210;
+    --text-secondary: #505631;
     --text-accent: #DE6E27;
     --text-white: #FBF8EF;
 
     --bg-primary: #B8A088;
     --bg-secondary: #FBF8EF;
-    --bg-dark: #5D3310;
-    --bg-gradient: linear-gradient(135deg, #B8A088 0%, #A56C32 100%);
+    --bg-dark: #2B3210;
+    --bg-gradient: linear-gradient(135deg, #B8A088 0%, #505631 100%);
 
-    --border-color: #B8A088;
+    --border-color: #A56C32;    /* Use medium brown for subtle borders */
     --shadow-light: 0 1px 3px rgba(93, 51, 16, 0.1);
     --shadow-medium: 0 4px 6px rgba(93, 51, 16, 0.1);
     --shadow-large: 0 10px 25px rgba(93, 51, 16, 0.15);
@@ -557,6 +559,7 @@ section {
     background: var(--bg-primary);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-light);
+    border: 1px solid var(--accent-edge);
 }
 
 .stat-number {
@@ -609,6 +612,7 @@ section {
     transition: all var(--transition-medium);
     position: relative;
     overflow: hidden;
+    border: 1px solid var(--accent-edge);
 }
 
 .service-card::before {
@@ -869,7 +873,9 @@ section {
     transition: all var(--transition-medium);
     position: relative;
     overflow: hidden;
-    border-top: 4px solid var(--accent-color);
+    border-top: 3px solid var(--accent-dimension);
+    border: 1px solid var(--accent-edge);
+    border-top: 3px solid var(--accent-dimension);
 }
 
 .why-card:hover,
@@ -977,6 +983,7 @@ section {
     transition: all var(--transition-medium);
     position: relative;
     overflow: hidden;
+    border: 1px solid var(--accent-edge);
 }
 
 .framework-step::before,
@@ -1141,6 +1148,7 @@ section {
     box-shadow: var(--shadow-medium);
     display: none;
     text-align: center;
+    border: 1px solid var(--accent-edge);
 }
 
 .testimonial-card.active {

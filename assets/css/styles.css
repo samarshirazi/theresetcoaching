@@ -559,6 +559,10 @@ section {
     white-space: nowrap;
 }
 
+.women-focus .section-header h2 {
+    white-space: normal;
+}
+
 .section-header p {
     font-size: 1.1rem;
     color: var(--text-secondary);

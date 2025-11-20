@@ -1646,7 +1646,8 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 3rem;
+        gap: 1.5rem;
+        padding: 0 1.25rem;
         transition: left var(--transition-medium);
     }
     
@@ -1670,6 +1671,23 @@ section {
         transform: rotate(-45deg) translate(7px, -6px);
     }
     
+    .nav-menu .nav-link,
+    .nav-menu .cta-button {
+        width: 80%;
+        max-width: 320px;
+        text-align: center;
+        border: 1px solid var(--border-color);
+        background: #fff;
+        color: var(--text-primary);
+        box-shadow: var(--shadow-light);
+    }
+
+    .nav-menu .cta-button {
+        background: var(--primary-color);
+        color: var(--text-white);
+        border: none;
+    }
+
     .nav-dropdown .dropdown-content {
         position: static;
         opacity: 1;

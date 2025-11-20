@@ -564,6 +564,13 @@ section {
     color: var(--text-secondary);
 }
 
+/* Ensure dark sections use light text */
+.mission-statement .section-header h2,
+.mission-statement .section-header p,
+.mission-statement .mission-content h2,
+.mission-statement .mission-content p {
+    color: var(--text-white);
+}
 /* ===== INTRODUCTION SECTION ===== */
 .introduction {
     position: relative;

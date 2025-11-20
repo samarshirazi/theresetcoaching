@@ -1142,23 +1142,23 @@ section {
     padding: 0.75rem 1rem;
     background: var(--bg-secondary);
     border-radius: var(--border-radius);
-    color: var(--text-secondary);
+    color: #000;
     font-size: 0.95rem;
     transition: all var(--transition-fast);
 }
 
 .credential-tag:hover {
     background: var(--accent-color);
-    color: var(--text-white);
+    color: #000;
 }
 
 .credential-tag i {
-    color: var(--accent-color);
+    color: #000;
     font-size: 1rem;
 }
 
 .credential-tag:hover i {
-    color: var(--text-white);
+    color: #000;
 }
 
 .transformation-list {

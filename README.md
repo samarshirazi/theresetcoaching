@@ -15,7 +15,6 @@ A stunning, modern, and fully responsive website for Flora Anafcheh's transforma
 - **About Page**: Flora's story, credentials, coaching philosophy, and values
 - **Services Page**: Detailed information about coaching services with pricing
 - **Testimonials**: Success stories and client testimonials with filtering
-- **Resources**: Free tools, blog articles, and valuable resources
 - **Contact**: Multiple contact methods with comprehensive contact form
 
 ### Technical Highlights
@@ -57,7 +56,6 @@ theresetcoaching/
 │   ├── about.html         # About page
 │   ├── services.html      # Services page
 │   ├── testimonials.html  # Testimonials page
-│   ├── resources.html     # Resources page
 │   └── contact.html       # Contact page
 └── README.md             # This file
 ```

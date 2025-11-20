@@ -382,8 +382,8 @@ a:focus-visible {
 
 .dropdown-link:hover,
 .dropdown-link.active {
-    background: var(--bg-secondary);
-    color: var(--accent-color);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-white);
 }
 
 /* ===== HERO SECTION ===== */

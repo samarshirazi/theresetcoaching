@@ -939,6 +939,10 @@ section {
     border-top: 3px solid var(--accent-dimension);
 }
 
+.program-feature-card {
+    text-align: center;
+}
+
 .why-card:hover,
 .for-card:hover,
 .tool-card:hover,

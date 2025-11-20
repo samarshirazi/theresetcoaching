@@ -920,6 +920,14 @@ section {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.do-grid .do-item:nth-child(4) {
+    grid-column: 2;
+}
+
+.do-grid .do-item:nth-child(5) {
+    grid-column: 3;
+}
+
 .gain-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
@@ -1679,6 +1687,11 @@ section {
 
     .why-personal .why-card:nth-child(4),
     .why-personal .why-card:nth-child(5) {
+        grid-column: auto;
+    }
+
+    .do-grid .do-item:nth-child(4),
+    .do-grid .do-item:nth-child(5) {
         grid-column: auto;
     }
 

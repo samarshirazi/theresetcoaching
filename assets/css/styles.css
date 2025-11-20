@@ -916,6 +916,14 @@ section {
     justify-items: center;
 }
 
+.do-grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.gain-grid {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
 .why-card,
 .for-card,
 .tool-card,

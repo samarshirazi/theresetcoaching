@@ -443,7 +443,7 @@ a:focus-visible {
 }
 
 .hero-title {
-    color: var(--text-white);
+    color: #b8a088;
     margin-bottom: 1.5rem;
     animation: slideInUp 1s ease 0.2s both;
 }

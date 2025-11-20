@@ -559,6 +559,10 @@ section {
     white-space: nowrap;
 }
 
+.reset-framework .section-header h2 {
+    white-space: normal;
+}
+
 .women-focus .section-header h2 {
     white-space: normal;
 }

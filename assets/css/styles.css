@@ -1161,6 +1161,11 @@ section {
     color: #000;
 }
 
+.personal-touch h3,
+.personal-touch p {
+    color: #000;
+}
+
 .transformation-list {
     display: flex;
     flex-direction: column;

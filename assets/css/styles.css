@@ -948,6 +948,32 @@ section {
     box-shadow: var(--shadow-large);
 }
 
+.benefit-card.list {
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    background: rgba(251, 248, 239, 0.1);
+    border: 1px solid rgba(251, 248, 239, 0.35);
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.benefit-card.list:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.benefit-card.list .benefit-icon {
+    background: rgba(251, 248, 239, 0.15);
+    border: 1px solid rgba(251, 248, 239, 0.35);
+}
+
+.benefit-card.list h4 {
+    margin: 0;
+    color: var(--text-white);
+}
+
 .why-icon,
 .for-icon,
 .tool-icon,

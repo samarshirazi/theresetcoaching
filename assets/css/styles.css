@@ -182,8 +182,8 @@ p {
 }
 
 .cta-button {
-    background: var(--accent-color);
-    color: var(--text-white);
+    background: #d48a2f;
+    color: #fffaf3;
     padding: 10px 20px;
     border-radius: var(--border-radius);
     text-decoration: none;
@@ -192,8 +192,8 @@ p {
 }
 
 .cta-button:hover {
-    background: var(--secondary-color);
-    color: var(--text-white);
+    background: #b87424;
+    color: #fffaf3;
     transform: translateY(-2px);
 }
 

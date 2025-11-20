@@ -525,6 +525,28 @@ section {
     padding: var(--section-padding);
 }
 
+/* Home section uniform background */
+.services-preview,
+.mission-statement,
+.why-reset,
+.reset-framework,
+.introduction {
+    background: var(--hero-gradient);
+}
+
+.services-preview .section-header h2,
+.services-preview .section-header p,
+.mission-statement .section-header h2,
+.mission-statement .section-header p,
+.why-reset .section-header h2,
+.why-reset .section-header p,
+.reset-framework .section-header h2,
+.reset-framework .section-header p,
+.introduction .section-header h2,
+.introduction .section-header p {
+    color: var(--text-white);
+}
+
 .section-header {
     text-align: center;
     max-width: 800px;
@@ -629,14 +651,14 @@ section {
 }
 
 .service-card {
-    background: var(--bg-primary);
+    background: rgba(93, 51, 16, 0.75);
     padding: 2.5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-medium);
     transition: all var(--transition-medium);
     position: relative;
     overflow: hidden;
-    border: 1px solid var(--accent-edge);
+    border: 1px solid rgba(251, 248, 239, 0.2);
     color: var(--text-white);
 }
 
@@ -893,7 +915,7 @@ section {
 .result-card,
 .learn-card,
 .mastery-card {
-    background: var(--bg-primary);
+    background: rgba(93, 51, 16, 0.75);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-medium);
@@ -901,7 +923,7 @@ section {
     position: relative;
     overflow: hidden;
     border-top: 3px solid var(--accent-dimension);
-    border: 1px solid var(--accent-edge);
+    border: 1px solid rgba(251, 248, 239, 0.2);
     border-top: 3px solid var(--accent-dimension);
 }
 
@@ -986,7 +1008,7 @@ section {
 
 /* ===== RESET FRAMEWORK SECTION ===== */
 .reset-framework {
-    background: var(--bg-secondary);
+    background: var(--hero-gradient);
 }
 
 .framework-steps {
@@ -1002,14 +1024,14 @@ section {
     grid-template-columns: 80px 1fr;
     gap: 2rem;
     align-items: start;
-    background: var(--bg-primary);
+    background: rgba(93, 51, 16, 0.75);
     padding: 2rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow-medium);
     transition: all var(--transition-medium);
     position: relative;
     overflow: hidden;
-    border: 1px solid var(--accent-edge);
+    border: 1px solid rgba(251, 248, 239, 0.2);
 }
 
 .framework-step::before,

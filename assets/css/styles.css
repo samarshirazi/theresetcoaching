@@ -412,7 +412,7 @@ a:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(184, 160, 136, 1);
+    background: var(--hero-gradient);
     z-index: 1;
 }
 
@@ -529,8 +529,7 @@ section {
 .services-preview,
 .mission-statement,
 .why-reset,
-.reset-framework,
-.introduction {
+.reset-framework {
     background: var(--hero-gradient);
 }
 
@@ -575,7 +574,7 @@ section {
 .introduction {
     position: relative;
     overflow: hidden;
-    background: var(--hero-gradient);
+    background: #b8a088;
 }
 
 .introduction .container {
@@ -591,13 +590,13 @@ section {
 
 .intro-text h2 {
     margin-bottom: 1.5rem;
-    color: var(--text-white);
+    color: var(--text-primary);
 }
 
 .intro-text p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
-    color: var(--text-white);
+    color: var(--text-primary);
 }
 
 .intro-stats {

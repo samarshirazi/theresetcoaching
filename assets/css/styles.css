@@ -32,6 +32,7 @@
     --bg-secondary: #FDFCFC;
     --bg-dark: #2B3210;
     --bg-gradient: linear-gradient(135deg, #B8A088 0%, #887059 100%);
+    --hero-gradient: linear-gradient(135deg, #5D3310 0%, #6f3f15 50%, #A56C32 100%);
 
     --border-color: #A56C32;    /* Use medium brown for subtle borders */
     --shadow-light: 0 1px 3px rgba(93, 51, 16, 0.1);
@@ -261,44 +262,55 @@ p {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .nav-link {
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
     text-decoration: none;
     color: var(--text-primary);
-    font-weight: 500;
-    transition: color var(--transition-fast);
+    font-weight: 600;
+    transition: all var(--transition-medium);
     position: relative;
+    border: 2px solid var(--accent-edge);
+    background: transparent;
 }
 
 .nav-link:hover,
+.nav-link:focus-visible,
 .nav-link.active {
-    color: var(--accent-color);
+    background: transparent;
+    color: var(--accent-edge);
+    box-shadow: none;
+}
+
+.nav-link.home-link {
+    letter-spacing: 0.02em;
+}
+
+.nav-link:focus-visible {
+    outline: 3px solid var(--accent-edge);
+    outline-offset: 2px;
+    background: transparent;
 }
 
 /* Ensure keyboard focus is clearly visible on links */
-.nav-link:focus-visible,
 .dropdown-link:focus-visible,
 .service-link:focus-visible,
 .social-link:focus-visible,
 .phone-link:focus-visible,
 .footer-links a:focus-visible,
 a:focus-visible {
-    outline: 3px solid var(--accent-color);
+    outline: 3px solid var(--accent-edge);
     outline-offset: 2px;
     text-decoration: underline;
+    color: var(--accent-edge);
 }
 
 .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: var(--accent-color);
-    border-radius: 1px;
+    display: none;
 }
 
 .hamburger {
@@ -321,9 +333,16 @@ a:focus-visible {
     position: relative;
 }
 
+.nav-dropdown > .nav-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    vertical-align: middle;
+}
+
 .nav-dropdown .nav-link i {
     font-size: 0.8rem;
-    margin-left: 0.5rem;
+    margin-left: 0;
     transition: transform var(--transition-fast);
 }
 
@@ -393,7 +412,7 @@ a:focus-visible {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(93, 51, 16, 0.85) 0%, rgba(93, 51, 16, 0.6) 50%, rgba(165, 108, 50, 0.4) 100%);
+    background: var(--hero-gradient);
     z-index: 1;
 }
 
@@ -525,14 +544,20 @@ section {
 
 /* ===== INTRODUCTION SECTION ===== */
 .introduction {
-    background: var(--bg-primary);
+    position: relative;
+    overflow: hidden;
+    background: var(--hero-gradient);
+}
+
+.introduction .container {
+    position: relative;
+    z-index: 1;
 }
 
 .intro-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .intro-text h2 {

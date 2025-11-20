@@ -90,13 +90,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.nav-container');
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-    } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
+    if (!navbar) return;
+    const bg = 'rgba(251, 248, 239, 0.95)'; // match nav default color
+    const scrolled = window.scrollY > 100;
+    navbar.style.background = bg;
+    navbar.style.boxShadow = scrolled ? '0 4px 6px rgba(0, 0, 0, 0.1)' : 'none';
 });
 
 // Intersection Observer for animations

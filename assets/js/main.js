@@ -129,6 +129,21 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+
+    // Intro section reveal
+    const intro = document.querySelector('.intro-content');
+    if (intro) {
+        intro.classList.add('is-animated');
+        const introObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    intro.classList.add('in-view');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.25 });
+        introObserver.observe(intro);
+    }
 });
 
 // Form validation and submission (for contact forms)

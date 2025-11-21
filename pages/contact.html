@@ -468,6 +468,40 @@
             color: var(--primary-color);
             font-size: 0.9rem;
         }
+
+        .consultation-benefits .benefits-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .consultation-benefits .benefit-card.list {
+            background: rgba(93, 51, 16, 0.08);
+            border-radius: 12px;
+            box-shadow: var(--shadow-light);
+            padding: 1rem 1.25rem;
+            align-items: center;
+        }
+
+        .consultation-benefits .benefit-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--bg-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-white);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+            border: 2px solid rgba(251, 248, 239, 0.25);
+        }
+
+        .consultation-benefits .benefit-card.list h4 {
+            color: var(--text-primary);
+            margin: 0;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
         
         .form-container {
             background: var(--bg-primary);
@@ -801,10 +835,19 @@
             .faq-answer {
                 padding: 1.75rem;
             }
-            
+
             .info-card {
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .consultation-benefits .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .consultation-benefits .benefit-card.list {
+                text-align: left;
+                gap: 0.75rem;
             }
             
             .quote-author {

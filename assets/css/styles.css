@@ -1725,6 +1725,16 @@ section {
         box-shadow: var(--shadow-light);
     }
 
+    .nav-menu .nav-dropdown {
+        width: 80%;
+        max-width: 320px;
+    }
+
+    .nav-menu .nav-dropdown > .nav-link {
+        width: 100%;
+        justify-content: center;
+    }
+
     .nav-menu .cta-button {
         background: var(--primary-color);
         color: var(--text-white);

@@ -263,10 +263,14 @@ p {
     display: flex;
     align-items: center;
     gap: 1.25rem;
+    z-index: 1100;
 }
 
 .nav-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
     padding: 8px 14px;
     border-radius: 999px;
     text-decoration: none;

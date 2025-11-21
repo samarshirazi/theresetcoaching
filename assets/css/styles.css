@@ -683,6 +683,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    justify-content: start;
 }
 
 .service-card {
@@ -938,19 +939,26 @@ section {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
     justify-items: stretch;
+    justify-content: start;
     align-items: stretch;
 }
 
 .do-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-content: start;
+    justify-items: stretch;
+    grid-auto-rows: 1fr;
 }
 
-.do-grid .do-item:nth-child(4) {
-    grid-column: 2;
-}
-
+/* Let items flow naturally in rows (no manual column placement) */
+.do-grid .do-item:nth-child(4),
 .do-grid .do-item:nth-child(5) {
-    grid-column: 3;
+    grid-column: auto !important;
+}
+
+.why-personal .why-card:nth-child(4),
+.why-personal .why-card:nth-child(5) {
+    grid-column: auto;
 }
 
 .gain-grid {
@@ -965,26 +973,6 @@ section {
 
 .why-personal .why-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.why-personal .why-card:nth-child(4) {
-    grid-column: 2;
-}
-
-.why-personal .why-card:nth-child(5) {
-    grid-column: 3;
-}
-
-.what-learn .learn-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.what-learn .learn-card:nth-child(4) {
-    grid-column: 2;
-}
-
-.what-learn .learn-card:nth-child(5) {
-    grid-column: 3;
 }
 
 .corporate-results .results-grid {

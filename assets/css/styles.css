@@ -1183,6 +1183,7 @@ section {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 1.5rem;
     justify-items: stretch;
+    margin-bottom: 1.5rem;
 }
 
 .structure-card {

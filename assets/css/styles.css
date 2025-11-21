@@ -2085,3 +2085,26 @@ section {
         gap: 1.25rem;
     }
 }
+
+/* Extra guard: force single-column card grids on smaller devices */
+@media (max-width: 900px) {
+    .services-grid,
+    .why-grid,
+    .for-grid,
+    .tools-grid,
+    .bio-goals-grid,
+    .program-features-grid,
+    .benefits-grid,
+    .do-grid,
+    .gain-grid,
+    .results-grid,
+    .learn-grid,
+    .mastery-grid,
+    .what-learn .learn-grid,
+    .corporate-results .results-grid,
+    .who-for .for-grid,
+    .why-personal .why-grid {
+        grid-template-columns: 1fr !important;
+        justify-items: stretch;
+    }
+}

@@ -2079,7 +2079,7 @@ section {
 
     /* Add breathing room after bio goal cards before following text on mobile */
     .bio-goals-grid {
-        margin-bottom: 1.25rem;
+        margin-bottom: 2rem;
     }
     
     .service-card {

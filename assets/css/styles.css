@@ -323,6 +323,7 @@ a:focus-visible {
     cursor: pointer;
     gap: 4px;
     z-index: 2100;
+    position: relative;
 }
 
 .hamburger span {
@@ -1678,7 +1679,11 @@ section {
     :root {
         --section-padding: 60px 0;
     }
-    
+
+    .hamburger {
+        display: flex !important;
+    }
+
     .nav-menu {
         display: none;
         position: fixed;
@@ -2016,12 +2021,6 @@ section {
 
     .testimonial-card {
         padding: 2rem;
-    }
-}
-
-@media (max-width: 1024px) {
-    .hamburger {
-        display: flex !important;
     }
 }
 

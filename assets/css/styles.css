@@ -976,27 +976,13 @@ section {
 }
 
 .corporate-results .results-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.corporate-results .result-card:nth-child(4) {
-    grid-column: 2;
-}
-
-.corporate-results .result-card:nth-child(5) {
-    grid-column: 3;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: start;
 }
 
 .who-for .for-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.who-for .for-card:nth-child(4) {
-    grid-column: 2;
-}
-
-.who-for .for-card:nth-child(5) {
-    grid-column: 3;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    justify-content: start;
 }
 
 .why-card,
@@ -1810,10 +1796,11 @@ section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .what-learn .learn-card:nth-child(4),
-    .what-learn .learn-card:nth-child(5) {
-        grid-column: auto;
-    }
+.what-learn .learn-grid {
+    grid-template-columns: repeat(3, minmax(260px, 1fr));
+    justify-content: start;
+    align-items: stretch;
+}
 
     .corporate-results .results-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));

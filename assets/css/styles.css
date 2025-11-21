@@ -1855,6 +1855,13 @@ section {
         gap: 1rem;
     }
 
+    /* Center standalone image placeholders on smaller screens */
+    .image-placeholder,
+    .service-image-placeholder {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero {
         padding: 90px 0 12px;
     }

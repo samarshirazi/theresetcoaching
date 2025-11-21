@@ -2126,6 +2126,24 @@ section {
     .philosophy-point .point-icon {
         display: none;
     }
+
+    /* Center icons in cards on small screens */
+    .why-icon,
+    .for-icon,
+    .tool-icon,
+    .bio-goal-icon,
+    .program-feature-icon,
+    .benefit-icon,
+    .gain-icon,
+    .result-icon,
+    .learn-icon,
+    .mastery-icon,
+    .do-icon,
+    .info-icon,
+    .method-icon {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* Extra guard: force single-column card grids on smaller devices */

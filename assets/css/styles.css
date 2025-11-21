@@ -936,6 +936,7 @@ section {
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
     justify-items: center;
+    align-items: stretch;
 }
 
 .do-grid {
@@ -1029,6 +1030,9 @@ section {
     border-top: 3px solid var(--accent-dimension);
     border: 1px solid rgba(251, 248, 239, 0.2);
     border-top: 3px solid var(--accent-dimension);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .program-feature-card {

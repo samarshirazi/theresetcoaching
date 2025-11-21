@@ -2094,6 +2094,11 @@ section {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }
+
+    /* Hide philosophy icons on small screens for cleaner layout */
+    .philosophy-point .point-icon {
+        display: none;
+    }
 }
 
 /* Extra guard: force single-column card grids on smaller devices */

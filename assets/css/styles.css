@@ -615,6 +615,9 @@ section {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
+    animation: slideInUp 0.7s ease forwards;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
 .intro-text h2 {
@@ -624,6 +627,7 @@ section {
 
 .intro-text p {
     font-size: 1.1rem;
+    margin-top: 0.75rem;
     margin-bottom: 2rem;
     color: var(--text-primary);
 }

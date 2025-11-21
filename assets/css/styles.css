@@ -2055,16 +2055,18 @@ section {
 }
 
 /* Desktop: 3 columns for What You'll Learn */
-section.what-learn .learn-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-}
+@media (min-width: 1025px) {
+    section.what-learn .learn-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    }
 
-section.what-learn .learn-card:nth-child(4) {
-    grid-column: auto !important;
-}
+    section.what-learn .learn-card:nth-child(4) {
+        grid-column: 1 !important;
+    }
 
-section.what-learn .learn-card:nth-child(5) {
-    grid-column: auto !important;
+    section.what-learn .learn-card:nth-child(5) {
+        grid-column: 2 !important;
+    }
 }
 
 @media (max-width: 480px) {

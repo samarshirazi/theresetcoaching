@@ -2129,4 +2129,14 @@ section {
         grid-template-columns: 1fr !important;
         justify-items: stretch;
     }
+
+    /* Hide small philosophy icons and center the companion image/card */
+    .philosophy-point .point-icon {
+        display: none !important;
+    }
+
+    .philosophy-image .image-placeholder {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

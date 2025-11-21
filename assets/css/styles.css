@@ -1817,20 +1817,6 @@ section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-section.what-learn .learn-grid {
-    grid-template-columns: 1fr 1fr 1fr !important;
-    justify-content: start !important;
-    align-items: stretch !important;
-}
-
-section.what-learn .learn-card:nth-child(4) {
-    grid-column: 1 !important;
-}
-
-section.what-learn .learn-card:nth-child(5) {
-    grid-column: 2 !important;
-}
-
     .corporate-results .results-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -2069,15 +2055,15 @@ section.what-learn .learn-card:nth-child(5) {
 
 /* Desktop: 3 columns for What You'll Learn */
 section.what-learn .learn-grid {
-    grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 
 section.what-learn .learn-card:nth-child(4) {
-    grid-column: 1 !important;
+    grid-column: auto !important;
 }
 
 section.what-learn .learn-card:nth-child(5) {
-    grid-column: 2 !important;
+    grid-column: auto !important;
 }
 
 @media (max-width: 480px) {

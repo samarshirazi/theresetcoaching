@@ -1680,6 +1680,7 @@ section {
     }
     
     .nav-menu {
+        display: none;
         position: fixed;
         top: 80px;
         left: -100%;
@@ -1693,9 +1694,11 @@ section {
         gap: 1.5rem;
         padding: 0 1.25rem;
         transition: left var(--transition-medium);
+        z-index: 1900;
     }
     
     .nav-menu.active {
+        display: flex;
         left: 0;
     }
     

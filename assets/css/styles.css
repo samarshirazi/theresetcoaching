@@ -318,10 +318,11 @@ a:focus-visible {
 }
 
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
+    z-index: 2100;
 }
 
 .hamburger span {
@@ -1698,10 +1699,6 @@ section {
         left: 0;
     }
     
-    .hamburger {
-        display: flex;
-    }
-    
     .hamburger.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -2016,6 +2013,12 @@ section {
 
     .testimonial-card {
         padding: 2rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .hamburger {
+        display: none;
     }
 }
 

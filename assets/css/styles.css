@@ -214,7 +214,7 @@ p {
     background: rgba(251, 248, 239, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border-color);
-    z-index: 1000;
+    z-index: 2000;
     transition: all var(--transition-medium);
 }
 
@@ -1673,7 +1673,7 @@ section {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     :root {
         --section-padding: 60px 0;
     }

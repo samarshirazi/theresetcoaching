@@ -2025,6 +2025,7 @@ section {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
+        justify-items: center;
     }
     
     .footer-bottom {
@@ -2040,6 +2041,19 @@ section {
         flex-direction: column;
         gap: 0.5rem;
         align-items: center;
+    }
+
+    .footer-section ul {
+        text-align: center;
+    }
+
+    .footer-section ul li {
+        display: inline-block;
+        margin: 0 0.4rem 0.6rem;
+    }
+
+    .social-links {
+        justify-content: center;
     }
 }
 

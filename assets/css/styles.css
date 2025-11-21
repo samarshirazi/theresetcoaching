@@ -402,10 +402,10 @@ a:focus-visible {
 /* ===== HERO SECTION ===== */
 .hero {
     position: relative;
-    min-height: 100vh;
+    min-height: auto;
     display: flex;
     align-items: center;
-    padding-top: 80px;
+    padding: 120px 0 60px;
     overflow: hidden;
 }
 
@@ -602,6 +602,7 @@ section {
     position: relative;
     overflow: hidden;
     background: #b8a088;
+    padding: 32px 0 72px;
 }
 
 .introduction .container {
@@ -1851,6 +1852,14 @@ section {
     .intro-stats {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem;
+    }
+
+    .hero {
+        padding: 110px 0 48px;
+    }
+
+    .introduction {
+        padding: 24px 0 60px;
     }
     
     .services-grid {

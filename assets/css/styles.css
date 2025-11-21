@@ -1999,8 +1999,17 @@ section {
     .structure-card {
         padding: 1.5rem;
     }
-    
+
     .testimonial-card {
         padding: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .what-learn .learn-grid,
+    .corporate-results .results-grid,
+    .who-for .for-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
     }
 }

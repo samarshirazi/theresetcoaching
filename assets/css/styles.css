@@ -935,7 +935,7 @@ section {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
-    justify-items: center;
+    justify-items: stretch;
     align-items: stretch;
 }
 
@@ -1033,6 +1033,7 @@ section {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100%;
 }
 
 .program-feature-card {

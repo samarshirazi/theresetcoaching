@@ -321,7 +321,7 @@ a:focus-visible {
 }
 
 .hamburger {
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
@@ -1718,7 +1718,7 @@ section {
     }
 
     .hamburger {
-        display: flex !important;
+        display: flex;
     }
 
     .nav-menu {

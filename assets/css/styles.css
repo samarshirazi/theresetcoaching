@@ -2074,7 +2074,8 @@ section {
 @media (max-width: 600px) {
     .what-learn .learn-grid,
     .corporate-results .results-grid,
-    .who-for .for-grid {
+    .who-for .for-grid,
+    .why-personal .why-grid {
         grid-template-columns: 1fr;
         gap: 1.25rem;
     }

@@ -2076,6 +2076,11 @@ section {
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+
+    /* Add breathing room after bio goal cards before following text on mobile */
+    .bio-goals-grid {
+        margin-bottom: 1.25rem;
+    }
     
     .service-card {
         padding: 2rem;

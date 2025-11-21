@@ -933,8 +933,16 @@ section {
 .do-grid,
 .gain-grid,
 .results-grid,
-.learn-grid,
 .mastery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    justify-items: stretch;
+    justify-content: start;
+    align-items: stretch;
+}
+
+.learn-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
@@ -1796,10 +1804,18 @@ section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-.what-learn .learn-grid {
-    grid-template-columns: repeat(3, minmax(260px, 1fr));
-    justify-content: start;
-    align-items: stretch;
+section.what-learn .learn-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+    justify-content: start !important;
+    align-items: stretch !important;
+}
+
+section.what-learn .learn-card:nth-child(4) {
+    grid-column: 1 !important;
+}
+
+section.what-learn .learn-card:nth-child(5) {
+    grid-column: 2 !important;
 }
 
     .corporate-results .results-grid {
@@ -2031,6 +2047,19 @@ section {
     .social-links {
         justify-content: center;
     }
+}
+
+/* Desktop: 3 columns for What You'll Learn */
+section.what-learn .learn-grid {
+    grid-template-columns: 1fr 1fr 1fr !important;
+}
+
+section.what-learn .learn-card:nth-child(4) {
+    grid-column: 1 !important;
+}
+
+section.what-learn .learn-card:nth-child(5) {
+    grid-column: 2 !important;
 }
 
 @media (max-width: 480px) {

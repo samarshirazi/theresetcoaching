@@ -1152,6 +1152,45 @@ section {
     margin-bottom: 0;
 }
 
+/* ===== PROGRAM STRUCTURE (Personal Coaching) ===== */
+.structure-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    justify-items: stretch;
+}
+
+.structure-card {
+    background: rgba(93, 51, 16, 0.75);
+    padding: 1.75rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    text-align: center;
+    border: 1px solid rgba(251, 248, 239, 0.2);
+}
+
+.structure-card h3 {
+    color: var(--text-white);
+    margin-bottom: 0.5rem;
+}
+
+.structure-card .duration {
+    display: block;
+    color: rgba(251, 248, 239, 0.9);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.structure-card p {
+    color: rgba(251, 248, 239, 0.9);
+    margin: 0;
+}
+
+.structure-card.featured {
+    border-color: var(--accent-dimension);
+    box-shadow: var(--shadow-large);
+}
+
 /* ===== RESET FRAMEWORK SECTION ===== */
 .reset-framework {
     background: var(--hero-gradient);
@@ -1784,6 +1823,14 @@ section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .structure-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .structure-card {
+        padding: 1.5rem;
+    }
+
     .why-grid,
     .for-grid,
     .tools-grid,
@@ -1935,6 +1982,22 @@ section {
     
     .service-card {
         padding: 2rem;
+    }
+
+    .why-card,
+    .for-card,
+    .tool-card,
+    .bio-goal-card,
+    .program-feature-card,
+    .benefit-card,
+    .do-item,
+    .gain-card,
+    .result-card,
+    .learn-card,
+    .mastery-card,
+    .framework-step,
+    .structure-card {
+        padding: 1.5rem;
     }
     
     .testimonial-card {

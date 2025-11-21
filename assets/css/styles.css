@@ -1907,8 +1907,9 @@ section {
     .gain-grid,
     .results-grid,
     .learn-grid,
-    .mastery-grid {
-        grid-template-columns: 1fr;
+    .mastery-grid,
+    .what-learn .learn-grid {
+        grid-template-columns: 1fr !important;
     }
 
     .framework-step,

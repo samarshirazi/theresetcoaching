@@ -1785,12 +1785,22 @@ section {
 
     .nav-dropdown .dropdown-content {
         position: static;
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        visibility: hidden;
+        max-height: 0;
+        overflow: hidden;
         transform: none;
         box-shadow: none;
         background: transparent;
         padding: 0;
+        margin-top: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-dropdown.open .dropdown-content {
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
         margin-top: 1rem;
     }
 

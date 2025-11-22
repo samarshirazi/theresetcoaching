@@ -19,9 +19,13 @@ if (hamburger && navMenu) {
     });
 }
 
-// Close mobile menu when clicking on a link
+// Close mobile menu when clicking on a link (except dropdown toggle)
 document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
+        // Don't close menu if clicking on dropdown toggle
+        if (link.closest('.nav-dropdown') && link === link.closest('.nav-dropdown').querySelector(':scope > .nav-link')) {
+            return;
+        }
         if (hamburger && navMenu) {
             hamburger.classList.remove('active');
             navMenu.classList.remove('active');
@@ -29,6 +33,21 @@ document.querySelectorAll('.nav-link').forEach(link => {
         }
     });
 });
+
+// Mobile dropdown toggle
+const navDropdown = document.querySelector('.nav-dropdown');
+if (navDropdown) {
+    const dropdownToggle = navDropdown.querySelector(':scope > .nav-link');
+    if (dropdownToggle) {
+        dropdownToggle.addEventListener('click', (e) => {
+            // Only toggle on mobile (check if hamburger is visible)
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                navDropdown.classList.toggle('open');
+            }
+        });
+    }
+}
 
 // Testimonials Slider
 const testimonialCards = document.querySelectorAll('.testimonial-card');

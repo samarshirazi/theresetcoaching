@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
+<body class="services-page">
     <!-- Navigation -->
     <nav class="nav-container">
         <div class="nav-wrapper">
@@ -307,6 +307,14 @@
     
     <style>
         /* Services Page Specific Styles */
+        .services-page h1 {
+            font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+        }
+
+        .services-page h2 {
+            font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+        }
+
         .page-header {
             background: var(--bg-gradient);
             color: var(--text-white);
@@ -320,7 +328,7 @@
         }
         
         .page-header p {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             color: rgba(255, 255, 255, 0.9);
         }
         
@@ -435,7 +443,7 @@
         }
         
         .service-title p {
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             color: var(--text-secondary);
             margin: 0;
         }
